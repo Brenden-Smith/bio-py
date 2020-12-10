@@ -28,7 +28,7 @@ class Animal():
                 if bc==1: # Mouth but no anus
                     self.platyhelmintha()
                     return
-                elif bc==2: # Mouth but no anus
+                elif bc==2: # Mouth and anus
                     seg = self.segmentation()
                     if seg==1: # Segmented
                         oth = self.other()
@@ -210,6 +210,7 @@ class DNARNA():
 
     def newentry(self, mode : int):
         if mode==1: # DNA -> RNA
+            print("Test String: ACGTTACGGATTACAGTCCCAAACTAC")
             self.dna=input("Enter DNA String: ")
             self.original = self.dna
             self.rna = self.dnatorna()
@@ -218,6 +219,7 @@ class DNARNA():
             self.mode2 = "DNA"
             self.mode3 = "RNA"
         else: # RNA -> DNA
+            print("Test String: UGCAAUGCCUAAUGUCAGGGUUUGAUG")
             self.rna = input("Enter RNA String: ")
             self.original = self.rna
             self.dna = self.rnatodna()
@@ -266,6 +268,7 @@ class AminoAcid:
         self.mode3 = "Amino Acid"
 
     def newaminoacid(self):
+        print("Test String: UAAUGUGUCGAAUCUAAGC")
         self.original = input("Enter RNA String: ")
         self.new = self.rnatoamino()
         print(f"""=== === === === ===
